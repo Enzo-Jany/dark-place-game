@@ -6,6 +6,7 @@ namespace dark_place_game
     [System.Serializable]
     /// Une Exeption Custom
     public class NotEnoughtSpaceInCurrencyHolderExeption : System.Exception {}
+    public class CantWitchDrawMoreThanCurrentAmountException : Exception{}
 
     public class CurrencyHolder
     {
@@ -41,7 +42,10 @@ namespace dark_place_game
         // Le champs interne de la property
         private int capacity = 0;
 
-        public CurrencyHolder(string name,int capacity, int amount) {
+        public CurrencyHolder(string name,int capacity, int amount){
+            if((amount < 0) || (name == null) || (name =="") || ( (name.Length<4) || (name.Length>10) ) ){
+                throw new System.ArgumentException("Argument invalide");
+            }
             Capacity = capacity;
             CurrencyName = name;
             CurrentAmount = amount;
@@ -56,11 +60,19 @@ namespace dark_place_game
         }
 
         public void Store(int amount) {
-            
+            var amountCurrent = this.CurrentAmount + amount;
+            if(amountCurrent > this.Capacity){
+                throw new System.ArgumentException("Argument invalide");
+            }
+            this.CurrentAmount += amount;
         }
 
         public void Withdraw(int amount) {
-
+            var amountCurrent = this.CurrentAmount - amount;
+            if (amount <0 ){
+                throw new CantWitchDrawMoreThanCurrentAmountException();
+            }
+            this.currentAmount -= amount;
         }
     }
 }
