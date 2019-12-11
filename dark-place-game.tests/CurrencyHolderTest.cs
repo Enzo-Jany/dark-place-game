@@ -136,7 +136,7 @@ namespace dark_place_game.tests
         }
 
         [Fact]
-        public void quantiténegativecurrency()
+        public void negativecurrency()
         {
             // On ne peux pas mettre (methode) put une quantité negative de currency dans un CurrencyHolder
             Action mauvaisAppel = () => new CurrencyHolder(EXEMPLE_NOM_MONNAIE_VALIDE , EXEMPLE_CAPACITE_VALIDE , -10);
