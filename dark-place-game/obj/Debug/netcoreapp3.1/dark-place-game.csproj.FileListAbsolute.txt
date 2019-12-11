@@ -1,0 +1,11 @@
+/Users/enzojany/VScode-workspace/dark-place-engine/dark-place-game/obj/Debug/netcoreapp3.1/dark-place-game.csprojAssemblyReference.cache
+/Users/enzojany/VScode-workspace/dark-place-engine/dark-place-game/obj/Debug/netcoreapp3.1/dark-place-game.AssemblyInfoInputs.cache
+/Users/enzojany/VScode-workspace/dark-place-engine/dark-place-game/obj/Debug/netcoreapp3.1/dark-place-game.AssemblyInfo.cs
+/Users/enzojany/VScode-workspace/dark-place-engine/dark-place-game/bin/Debug/netcoreapp3.1/dark-place-game
+/Users/enzojany/VScode-workspace/dark-place-engine/dark-place-game/bin/Debug/netcoreapp3.1/dark-place-game.deps.json
+/Users/enzojany/VScode-workspace/dark-place-engine/dark-place-game/bin/Debug/netcoreapp3.1/dark-place-game.runtimeconfig.json
+/Users/enzojany/VScode-workspace/dark-place-engine/dark-place-game/bin/Debug/netcoreapp3.1/dark-place-game.runtimeconfig.dev.json
+/Users/enzojany/VScode-workspace/dark-place-engine/dark-place-game/bin/Debug/netcoreapp3.1/dark-place-game.dll
+/Users/enzojany/VScode-workspace/dark-place-engine/dark-place-game/bin/Debug/netcoreapp3.1/dark-place-game.pdb
+/Users/enzojany/VScode-workspace/dark-place-engine/dark-place-game/obj/Debug/netcoreapp3.1/dark-place-game.dll
+/Users/enzojany/VScode-workspace/dark-place-engine/dark-place-game/obj/Debug/netcoreapp3.1/dark-place-game.pdb
