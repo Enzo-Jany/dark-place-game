@@ -43,25 +43,36 @@ namespace dark_place_game
         private int capacity = 0;
 
         public CurrencyHolder(string name,int capacity, int amount){
-            if((amount < 0) || (name == null) || (name =="") || ( (name.Length<4) || (name.Length>10) ) ){
+            if((amount < 0) || (name == null) || (name =="") || ( (name.Length<4) || (name.Length>10) ) || (amount > capacity) || name.StartsWith("A") || name.StartsWith("a")){
                 throw new System.ArgumentException("Argument invalide");
             }
+
             Capacity = capacity;
             CurrencyName = name;
             CurrentAmount = amount;
         }
 
         public bool IsEmpty() {
-            return true;
+            if ((this.currentAmount == 0)){
+                return true;
+            }
+            else{
+                return false;
+            }
         }
 
         public bool IsFull() {
-            return true;
+            if ((this.currentAmount == this.capacity)){
+                return true;
+            }
+            else{
+                return false;
+            }
         }
 
         public void Store(int amount) {
             var amountCurrent = this.CurrentAmount + amount;
-            if(amountCurrent > this.Capacity){
+            if((amountCurrent > this.Capacity) || (amount < 0) || (amount == 0)){
                 throw new System.ArgumentException("Argument invalide");
             }
             this.CurrentAmount += amount;
@@ -69,7 +80,7 @@ namespace dark_place_game
 
         public void Withdraw(int amount) {
             var amountCurrent = this.CurrentAmount - amount;
-            if (amount <0 ){
+            if ((amount <0) || (amount == 0) ){
                 throw new CantWitchDrawMoreThanCurrentAmountException();
             }
             this.currentAmount -= amount;
